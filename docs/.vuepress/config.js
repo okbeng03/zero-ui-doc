@@ -16,16 +16,23 @@ module.exports = {
         'component',
         'validate',
         'extend',
-        {
-          path: '',
-          title: 'Demo 示例',
-          children: [
-            '/form/example/basic'
-          ]
-        }
+        // {
+        //   path: '',
+        //   title: 'Demo 示例',
+        //   children: [
+        //     '/form/example/basic'
+        //   ]
+        // }
       ],
       '/table/': [
-        ''
+        '',
+        'concept',
+        'config',
+        'default',
+        'definition',
+        'component',
+        'search',
+        'extend'
       ],
       '/': [
         '',
