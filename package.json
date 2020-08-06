@@ -1,0 +1,36 @@
+{
+  "name": "zero-ui-doc",
+  "version": "0.0.1",
+  "description": "zero ui document",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okbeng03/zero-ui-doc.git"
+  },
+  "keywords": [
+    "zero-ui",
+    "vue",
+    "json-schema",
+    "form",
+    "datagrid",
+    "markdown",
+    "document"
+  ],
+  "author": "okbeng03",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.12.3",
+    "ajv-errors": "^1.0.1",
+    "ant-design-vue": "^1.6.4",
+    "axios": "^0.19.2",
+    "json-schema": "^0.2.5",
+    "lodash": "^4.17.19",
+    "vuedraggable": "^2.24.0"
+  },
+  "devDependencies": {
+    "vuepress": "^1.5.2"
+  }
+}
