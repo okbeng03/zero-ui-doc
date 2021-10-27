@@ -11,7 +11,7 @@ git pull origin gh-pages --rebase
 cp -R docs/.vuepress/* .
 
 # remove 'node_modules' and '_book' directory
-git clean -fx docs/.vuepress
+git clean -fx docs/.vuepress/dist
 
 # add all files
 git add .

@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Zero UI',
   description: '前端中后台配置化UI',
+  base: '/zero-ui-doc',
   themeConfig: {
     nav: [
       { text: 'Zero UI', link: '/' },
