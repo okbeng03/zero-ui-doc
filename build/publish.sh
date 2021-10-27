@@ -6,7 +6,7 @@ cnpm install && npm run docs:build
 git pull origin gh-pages --rebase
 
 # copy the static site files into the current directory.
-cp -R docs/.vuepress/* .
+cp -R docs/.vuepress/dist/* .
 
 # remove 'node_modules' and '_book' directory
 git clean -fx docs/.vuepress
