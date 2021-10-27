@@ -105,7 +105,7 @@ definition: {
 // 添加 upload 组件，并且统一上传接口
 definitionRules.push({
   name: 'upload',
-  parse: function (definition, schema, parentSchema) {
+  parse: function (schema, parentSchema, definition) {
     return {
       type: 'a-upload',
       action: (file) => {
