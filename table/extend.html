@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>扩展 | Zero UI</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="前端中后台配置化UI">
+    <link rel="preload" href="/assets/css/0.styles.23c49910.css" as="style"><link rel="preload" href="/assets/js/app.8e5c6b0c.js" as="script"><link rel="preload" href="/assets/js/2.b79a9f74.js" as="script"><link rel="preload" href="/assets/js/24.a13738cf.js" as="script"><link rel="prefetch" href="/assets/js/10.b3898002.js"><link rel="prefetch" href="/assets/js/11.ac458fa5.js"><link rel="prefetch" href="/assets/js/12.1803d872.js"><link rel="prefetch" href="/assets/js/13.c894469f.js"><link rel="prefetch" href="/assets/js/14.1230f005.js"><link rel="prefetch" href="/assets/js/15.da4f038e.js"><link rel="prefetch" href="/assets/js/16.5259baa3.js"><link rel="prefetch" href="/assets/js/17.b2501cea.js"><link rel="prefetch" href="/assets/js/18.fb237084.js"><link rel="prefetch" href="/assets/js/19.e78d812b.js"><link rel="prefetch" href="/assets/js/20.bbfba150.js"><link rel="prefetch" href="/assets/js/21.48e73f79.js"><link rel="prefetch" href="/assets/js/22.18db509d.js"><link rel="prefetch" href="/assets/js/23.554b6976.js"><link rel="prefetch" href="/assets/js/25.da103d9f.js"><link rel="prefetch" href="/assets/js/3.1f4a9c96.js"><link rel="prefetch" href="/assets/js/4.6e4e40cc.js"><link rel="prefetch" href="/assets/js/5.5c861042.js"><link rel="prefetch" href="/assets/js/6.d8c14d7b.js"><link rel="prefetch" href="/assets/js/7.375afaae.js"><link rel="prefetch" href="/assets/js/8.dd3310bf.js"><link rel="prefetch" href="/assets/js/9.3b07f035.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23c49910.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Zero UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Zero UI
+</a></div><div class="nav-item"><a href="/form/" class="nav-link">
+  Form
+</a></div><div class="nav-item"><a href="/table/" class="nav-link router-link-active">
+  Table
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Zero UI
+</a></div><div class="nav-item"><a href="/form/" class="nav-link">
+  Form
+</a></div><div class="nav-item"><a href="/table/" class="nav-link router-link-active">
+  Table
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/table/" aria-current="page" class="sidebar-link">Table 表格</a></li><li><a href="/table/concept.html" class="sidebar-link">核心概念</a></li><li><a href="/table/config.html" class="sidebar-link">默认配置</a></li><li><a href="/table/default.html" class="sidebar-link">基础规则</a></li><li><a href="/table/definition.html" class="sidebar-link">Definition</a></li><li><a href="/table/component.html" class="sidebar-link">内置组件</a></li><li><a href="/table/search.html" class="sidebar-link">查询</a></li><li><a href="/table/extend.html" aria-current="page" class="active sidebar-link">扩展</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/table/extend.html#addons-模块扩展" class="sidebar-link">addons 模块扩展</a></li><li class="sidebar-sub-header"><a href="/table/extend.html#schema-扩展" class="sidebar-link">schema 扩展</a></li><li class="sidebar-sub-header"><a href="/table/extend.html#definition-扩展" class="sidebar-link">definition 扩展</a></li><li class="sidebar-sub-header"><a href="/table/extend.html#operationaddonrules-扩展" class="sidebar-link">operationAddonRules 扩展</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="扩展"><a href="#扩展" class="header-anchor">#</a> 扩展</h1> <p>内置组件和规则并不能支持更多样复杂的表单输入，所以提供了几个规则可以方便地去扩展：</p> <div class="language- extra-class"><pre class="language-text"><code>import { tableRules } from 'zero-ui'
+
+const { addons, schemaRules, definitionRules, operationAddonRules } = formRules
+</code></pre></div><h2 id="addons-模块扩展"><a href="#addons-模块扩展" class="header-anchor">#</a> addons 模块扩展</h2> <p>但是如果你的每个列表都有一个公用的模块，可以通过addons添加模块，当然也可以在自己的 Vue APP 里添加。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 添加一个表单标题</span>
+addons<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">parse</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">definition<span class="token punctuation">,</span> schema<span class="token punctuation">,</span> schemaPathMap</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> title <span class="token operator">=</span> schema<span class="token punctuation">.</span>title <span class="token operator">||</span> <span class="token string">''</span>
+    <span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      title
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> definition<span class="token punctuation">)</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">render</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">h</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>config<span class="token punctuation">.</span>title<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// addon必须返回渲染函数</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      config<span class="token punctuation">,</span>
+      render
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// definition 可以添加 title 描述，覆盖默认规则</span>
+<span class="token comment">/**
+definition: {
+  form: {
+    ...
+  },
+  title: {
+    title: 'definition 定义的标题'
+  }
+}
+**/</span>
+</code></pre></div><h2 id="schema-扩展"><a href="#schema-扩展" class="header-anchor">#</a> schema 扩展</h2> <p>规则解析时，会解析schema type来生成默认规则<a href="/table/default.html">参考</a></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// boolean 类型，true 展示 `ACTIVE`，false 展示 `INACTIVE`</span>
+schemaRules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'boolean'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">parse</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> schema<span class="token punctuation">,</span> parentSchema<span class="token punctuation">,</span> definition <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token function">render</span> <span class="token punctuation">(</span><span class="token parameter">h<span class="token punctuation">,</span> text</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{</span> text <span class="token operator">?</span> <span class="token string">'ACTIVE'</span> <span class="token operator">:</span> <span class="token string">'INACTIVE'</span> <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="definition-扩展"><a href="#definition-扩展" class="header-anchor">#</a> definition 扩展</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 添加 tag 组件</span>
+<span class="token keyword">const</span> typeMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token operator">:</span> <span class="token string">'#f50'</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span><span class="token operator">:</span> <span class="token string">'#2db7f5'</span><span class="token punctuation">,</span>
+  <span class="token constant">C</span><span class="token operator">:</span> <span class="token string">'#87d068'</span>
+<span class="token punctuation">}</span>
+
+definitionRules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'tag'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">parse</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> schema<span class="token punctuation">,</span> parentSchema<span class="token punctuation">,</span> definition <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">h<span class="token punctuation">,</span> text</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'a-tag'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          props<span class="token operator">:</span> <span class="token punctuation">{</span>
+            color<span class="token operator">:</span> typeMap<span class="token punctuation">[</span>text<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>text<span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 这样就可以直接使用了</span>
+<span class="token comment">/**
+definition: {
+  table: {
+    columns: [
+      {
+        key: 'status',
+        type: 'tag'
+      },
+      ...
+    ]
+  }
+}
+**/</span>
+</code></pre></div><h2 id="operationaddonrules-扩展"><a href="#operationaddonrules-扩展" class="header-anchor">#</a> operationAddonRules 扩展</h2> <p>operation addon 规则</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 添加上传组件</span>
+operationAddonRules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'upload'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">parse</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">h</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'a-upload'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          on<span class="token operator">:</span> <span class="token punctuation">{</span>
+            change<span class="token operator">:</span> <span class="token string">'onUpload'</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+          <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'a-button'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+            <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'a-icon'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+              props<span class="token operator">:</span> <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'upload'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">'上传'</span>
+          <span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/table/search.html" class="prev">
+        查询
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8e5c6b0c.js" defer></script><script src="/assets/js/2.b79a9f74.js" defer></script><script src="/assets/js/24.a13738cf.js" defer></script>
+  </body>
+</html>

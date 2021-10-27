@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基础规则 | Zero UI</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="前端中后台配置化UI">
+    <link rel="preload" href="/assets/css/0.styles.23c49910.css" as="style"><link rel="preload" href="/assets/js/app.8e5c6b0c.js" as="script"><link rel="preload" href="/assets/js/2.b79a9f74.js" as="script"><link rel="preload" href="/assets/js/12.1803d872.js" as="script"><link rel="prefetch" href="/assets/js/10.b3898002.js"><link rel="prefetch" href="/assets/js/11.ac458fa5.js"><link rel="prefetch" href="/assets/js/13.c894469f.js"><link rel="prefetch" href="/assets/js/14.1230f005.js"><link rel="prefetch" href="/assets/js/15.da4f038e.js"><link rel="prefetch" href="/assets/js/16.5259baa3.js"><link rel="prefetch" href="/assets/js/17.b2501cea.js"><link rel="prefetch" href="/assets/js/18.fb237084.js"><link rel="prefetch" href="/assets/js/19.e78d812b.js"><link rel="prefetch" href="/assets/js/20.bbfba150.js"><link rel="prefetch" href="/assets/js/21.48e73f79.js"><link rel="prefetch" href="/assets/js/22.18db509d.js"><link rel="prefetch" href="/assets/js/23.554b6976.js"><link rel="prefetch" href="/assets/js/24.a13738cf.js"><link rel="prefetch" href="/assets/js/25.da103d9f.js"><link rel="prefetch" href="/assets/js/3.1f4a9c96.js"><link rel="prefetch" href="/assets/js/4.6e4e40cc.js"><link rel="prefetch" href="/assets/js/5.5c861042.js"><link rel="prefetch" href="/assets/js/6.d8c14d7b.js"><link rel="prefetch" href="/assets/js/7.375afaae.js"><link rel="prefetch" href="/assets/js/8.dd3310bf.js"><link rel="prefetch" href="/assets/js/9.3b07f035.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23c49910.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Zero UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Zero UI
+</a></div><div class="nav-item"><a href="/form/" class="nav-link router-link-active">
+  Form
+</a></div><div class="nav-item"><a href="/table/" class="nav-link">
+  Table
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Zero UI
+</a></div><div class="nav-item"><a href="/form/" class="nav-link router-link-active">
+  Form
+</a></div><div class="nav-item"><a href="/table/" class="nav-link">
+  Table
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/form/" aria-current="page" class="sidebar-link">Form 表单</a></li><li><a href="/form/concept.html" class="sidebar-link">核心概念</a></li><li><a href="/form/default.html" aria-current="page" class="active sidebar-link">基础规则</a></li><li><a href="/form/definition.html" class="sidebar-link">Definition</a></li><li><a href="/form/component.html" class="sidebar-link">内置组件</a></li><li><a href="/form/validate.html" class="sidebar-link">表单校验</a></li><li><a href="/form/extend.html" class="sidebar-link">扩展</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="基础规则"><a href="#基础规则" class="header-anchor">#</a> 基础规则</h1> <p>基于 JSON schema 规范描述，我们可以生成以下默认类型的表单元素：</p> <table><thead><tr><th style="text-align:left;">Schema</th> <th style="text-align:left;">Form Type</th></tr></thead> <tbody><tr><td style="text-align:left;">type: string &amp; format: date、date-time、time</td> <td style="text-align:left;">date</td></tr> <tr><td style="text-align:left;">type: string &amp; enum属性</td> <td style="text-align:left;">select</td></tr> <tr><td style="text-align:left;">type: string</td> <td style="text-align:left;">text</td></tr> <tr><td style="text-align:left;">type: number</td> <td style="text-align:left;">number</td></tr> <tr><td style="text-align:left;">type: integer</td> <td style="text-align:left;">number</td></tr> <tr><td style="text-align:left;">type: boolean</td> <td style="text-align:left;">switch</td></tr> <tr><td style="text-align:left;">type: object</td> <td style="text-align:left;">fieldset</td></tr> <tr><td style="text-align:left;">type: array &amp; enum属性</td> <td style="text-align:left;">checkboxs</td></tr> <tr><td style="text-align:left;">type: array</td> <td style="text-align:left;">list可增删</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/form/concept.html" class="prev">
+        核心概念
+      </a></span> <span class="next"><a href="/form/definition.html">
+        Definition
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8e5c6b0c.js" defer></script><script src="/assets/js/2.b79a9f74.js" defer></script><script src="/assets/js/12.1803d872.js" defer></script>
+  </body>
+</html>

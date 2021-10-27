@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>默认配置 | Zero UI</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="前端中后台配置化UI">
+    <link rel="preload" href="/assets/css/0.styles.23c49910.css" as="style"><link rel="preload" href="/assets/js/app.8e5c6b0c.js" as="script"><link rel="preload" href="/assets/js/2.b79a9f74.js" as="script"><link rel="preload" href="/assets/js/21.48e73f79.js" as="script"><link rel="prefetch" href="/assets/js/10.b3898002.js"><link rel="prefetch" href="/assets/js/11.ac458fa5.js"><link rel="prefetch" href="/assets/js/12.1803d872.js"><link rel="prefetch" href="/assets/js/13.c894469f.js"><link rel="prefetch" href="/assets/js/14.1230f005.js"><link rel="prefetch" href="/assets/js/15.da4f038e.js"><link rel="prefetch" href="/assets/js/16.5259baa3.js"><link rel="prefetch" href="/assets/js/17.b2501cea.js"><link rel="prefetch" href="/assets/js/18.fb237084.js"><link rel="prefetch" href="/assets/js/19.e78d812b.js"><link rel="prefetch" href="/assets/js/20.bbfba150.js"><link rel="prefetch" href="/assets/js/22.18db509d.js"><link rel="prefetch" href="/assets/js/23.554b6976.js"><link rel="prefetch" href="/assets/js/24.a13738cf.js"><link rel="prefetch" href="/assets/js/25.da103d9f.js"><link rel="prefetch" href="/assets/js/3.1f4a9c96.js"><link rel="prefetch" href="/assets/js/4.6e4e40cc.js"><link rel="prefetch" href="/assets/js/5.5c861042.js"><link rel="prefetch" href="/assets/js/6.d8c14d7b.js"><link rel="prefetch" href="/assets/js/7.375afaae.js"><link rel="prefetch" href="/assets/js/8.dd3310bf.js"><link rel="prefetch" href="/assets/js/9.3b07f035.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23c49910.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Zero UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Zero UI
+</a></div><div class="nav-item"><a href="/form/" class="nav-link">
+  Form
+</a></div><div class="nav-item"><a href="/table/" class="nav-link router-link-active">
+  Table
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Zero UI
+</a></div><div class="nav-item"><a href="/form/" class="nav-link">
+  Form
+</a></div><div class="nav-item"><a href="/table/" class="nav-link router-link-active">
+  Table
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/table/" aria-current="page" class="sidebar-link">Table 表格</a></li><li><a href="/table/concept.html" class="sidebar-link">核心概念</a></li><li><a href="/table/config.html" aria-current="page" class="active sidebar-link">默认配置</a></li><li><a href="/table/default.html" class="sidebar-link">基础规则</a></li><li><a href="/table/definition.html" class="sidebar-link">Definition</a></li><li><a href="/table/component.html" class="sidebar-link">内置组件</a></li><li><a href="/table/search.html" class="sidebar-link">查询</a></li><li><a href="/table/extend.html" class="sidebar-link">扩展</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="默认配置"><a href="#默认配置" class="header-anchor">#</a> 默认配置</h1> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 表格配置</span>
+  table<span class="token operator">:</span> <span class="token punctuation">{</span>
+    tableLayout<span class="token operator">:</span> <span class="token string">'fixed'</span><span class="token punctuation">,</span>
+    locale<span class="token operator">:</span> <span class="token punctuation">{</span>
+      filterConfirm<span class="token operator">:</span> <span class="token string">'确定'</span><span class="token punctuation">,</span>
+      filterReset<span class="token operator">:</span> <span class="token string">'重置'</span><span class="token punctuation">,</span>
+      emptyText<span class="token operator">:</span> <span class="token string">'暂无数据'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    size<span class="token operator">:</span> <span class="token string">'default'</span><span class="token punctuation">,</span>
+    pagination<span class="token operator">:</span> <span class="token punctuation">{</span>
+      current<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      pageSize<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      total<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      size<span class="token operator">:</span> <span class="token string">'default'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    loading<span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// 搜索配置</span>
+  search<span class="token operator">:</span> <span class="token punctuation">{</span>
+    method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 表单配置，行内表单</span>
+    form<span class="token operator">:</span> <span class="token punctuation">{</span>
+      layout<span class="token operator">:</span> <span class="token string">'inline'</span><span class="token punctuation">,</span>
+      labelAlign<span class="token operator">:</span> <span class="token string">'right'</span><span class="token punctuation">,</span>
+      okText<span class="token operator">:</span> <span class="token string">'查询'</span><span class="token punctuation">,</span>
+      validate<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      hideRequiredMark<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 查询默认参数</span>
+    params<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/table/concept.html" class="prev">
+        核心概念
+      </a></span> <span class="next"><a href="/table/default.html">
+        基础规则
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8e5c6b0c.js" defer></script><script src="/assets/js/2.b79a9f74.js" defer></script><script src="/assets/js/21.48e73f79.js" defer></script>
+  </body>
+</html>
